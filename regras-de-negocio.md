@@ -17,3 +17,6 @@
 
 * **RN06**
 **Unicidade e Validação de Estabelecimento:** O sistema deve validar matematicamente o formato do CNPJ no momento do cadastro do Lava-jato e impedir o registro de duas contas diferentes utilizando o mesmo número de CNPJ. Além disso, o e-mail cadastrado por qualquer tipo de usuário deve ser único em todo o sistema.
+
+* **RN07**
+**Elegibilidade para avaliacão:** Apenas clientes autenticados que possuam um agendamento com o status `"concluído"` contendo um determinado serviço estão autorizados a enviar uma avaliação para aquele serviço, sendo vedada a duplicidade de feedback para o mesmo atendimento.
