@@ -36,3 +36,4 @@
 | **RNF02** | O acesso aos dados no banco de dados deve ser protegido por políticas de segurança a nível de linha (Row Level Security - RLS). |
 | **RNF03** | O sistema deve utilizar um banco de dados relacional PostgreSQL. |
 | **RNF04** | A aplicação web/API deve operar em ambiente online para permitir a comunicação em tempo real entre clientes e lava-jatos. |
+| **RNF05** | O sistema deve implementar soft delete, a fim de presevar os registro originais no banco e seus históricos | 
