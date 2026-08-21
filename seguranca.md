@@ -135,7 +135,7 @@ With check (true)
 ### C. Módulo do Cliente (`veiculo`)
 
 - **`veiculo`:**
-  - *SELECT / INSERT / UPDATE / DELETE:* O cliente gerencia exclusivamente os veículos vinculados sob a sua titularidade (`id_cliente = auth.uid()`).
+  - *SELECT / INSERT / UPDATE:* O cliente gerencia exclusivamente os veículos vinculados sob a sua titularidade (`id_cliente = auth.uid()`).
 
 ### D. Módulo Transacional (`agendamento`, `agendamento_servico`, `notificacao`)
 
