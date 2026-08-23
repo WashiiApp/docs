@@ -61,7 +61,7 @@ Usuários autenticados no sistema (`authenticated`).
 
 - `agendamento_servico`
 - `telefone`
-- `telefone_usuario`
+- `usuario_telefone`
 - `avaliacao`
 - `categoria_veiculo_servico`
 
@@ -74,12 +74,12 @@ Usuários autenticados no sistema (`authenticated`).
 | **`cliente`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE` |
 | **`servico`** | `SELECT` (Ativos) | `SELECT`, `INSERT`, `UPDATE` |
 | **`disponibilidade`** | `SELECT` | `SELECT`, `INSERT`, `UPDATE` |
-| **`veiculo`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
+| **`veiculo`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE` |
 | **`agendamento`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE` |
 | **`agendamento_servico`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 | **`notificacao`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE` |
 | **`telefone`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
-| **`telefone_usuario`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
+| **`usuario_telefone`** | Sem acesso | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 | **`avaliacao`** | `SELECT` | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 | **`categoria_veiculo_servico`** | `SELECT` | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
 | **Tabelas de Domínio/Estáticas**  | `SELECT` | `SELECT` |
@@ -121,7 +121,7 @@ With check (true)
 ### B. Módulo de Operação e Catálogo (`servico`, `disponibilidade`, `categoria_veiculo_servico`)
 
 - **`servico`:**
-  - *SELECT:* Público para serviços marcados como ativos (`ativo = true`); visualização completa para o próprio estabelecimento.
+  - *SELECT:* Público para serviços marcados como ativos (`ativo = true`).
   - *INSERT / UPDATE:* Restrito ao lava-jato proprietário do catálogo.
 
 - **`disponibilidade`:**
@@ -148,9 +148,9 @@ With check (true)
 - **`notificacao`:**
   - *SELECT / INSERT / UPDATE:* Restrito estritamente aos usuários envolvidos na transação do agendamento correspondente.
 
-### E. Módulo de Contato (`telefone`, `telefone_usuario`)
+### E. Módulo de Contato (`telefone`, `usuario_telefone`)
 
-- **`telefone` / `telefone_usuario`:**
+- **`telefone` / `usuario_telefone`:**
   - *SELECT / INSERT / UPDATE / DELETE:* O usuário visualiza e gerencia apenas os telefones e associações vinculadas ao seu próprio ID (`id_usuario = auth.uid()`).
 
 ### F. Módulo de Avaliações (`avaliacao`)
