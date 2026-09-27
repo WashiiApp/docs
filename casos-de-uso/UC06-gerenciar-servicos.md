@@ -66,6 +66,6 @@ Este caso de uso descreve o processo pelo qual o Lava-jato cadastra, edita, ativ
 3. O sistema exibe uma mensagem informando que já existe um serviço com esse nome no catálogo.
 
 **EX04: Tentativa de excluir serviço com agendamentos vinculados**
-1. O lava-jato tenta excluir permanentemente um serviço que já possui agendamentos  associados ainda não concluidos.
+1. O lava-jato tenta excluir permanentemente um serviço que já possui agendamentos  associados ainda não concluidos ou não cancelados.
 2. O sistema impede a exclusão física do registro.
 3. O sistema orienta o lava-jato a desativar o serviço (FA03) em vez de excluí-lo, preservando o histórico de agendamentos.
